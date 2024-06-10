@@ -82,7 +82,6 @@
             padding: 1rem;
             text-align: center;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            flex: 1 1 calc(33.333% - 2rem);
             box-sizing: border-box;
             border-radius: 8px;
             transition: transform 0.3s ease;
@@ -136,11 +135,12 @@
             box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
         }
         /* Responsividade */
-        @media (max-width: 768px) {
+        @media (max-width: 480px) {
             .product {
                 flex-basis: 100%; /* Um produto por linha em telas pequenas */
             }
             header .logo-whatsapp {
+                margin-left: 0;
                 justify-content: center;
             }
         }
@@ -165,13 +165,13 @@
     </div>
     <a class="whatsapp" href="https://wa.me/5545991190099" target="_blank">
         WhatsApp
-        <img src="<blockquote class="imgur-embed-pub" lang="en" data-id="a/64KrjYQ" data-context="false" ><a href="//imgur.com/a/64KrjYQ"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>" alt="WhatsApp">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
     </a>
 </header>
 
 <nav>
     <a href="#">Início</a>
-    <a href="#">Produtos</a>
+    <a href="#">Produtos</a
     <a href="#">Sobre</a>
     <a href="#">Contato</a>
 </nav>
@@ -188,14 +188,43 @@
     </div>
 
     <div class="product-list">
-        <!-- Exemplos de produtos sem o botão do PayPal -->
+        <!-- Adicionando os produtos novamente -->
         <div class="product" data-category="tech">
             <img src="https://via.placeholder.com/150" alt="Produto Tech 1">
             <h2>Fone de Ouvido Bluetooth</h2>
             <p>Alta qualidade de som, conexão sem fio.</p>
             <div class="price">R$ 199,99</div>
         </div>
-        <!-- Adicione mais produtos conforme necessário -->
+        <div class="product" data-category="presentes">
+            <img src="https://via.placeholder.com/150" alt="Presente 1">
+            <h2>Caneca Nerd</h2>
+            <p>Perfeita para geeks e fãs de tecnologia.</p>
+            <div class="price">R$ 99,99</div>
+        </div>
+        <div class="product" data-category="infoprodutos">
+            <img src="https://via.placeholder.com/150" alt="Infoproduto 1">
+            <h2>Curso de Programação</h2>
+            <p>Aprenda a programar do zero com este curso.</p>
+            <div class="price">R$ 299,99</div>
+        </div>
+        <div class="product" data-category="presentes">
+            <img src="https://via.placeholder.com/150" alt="Presente 2">
+            <h2>Action Figure</h2>
+            <p>Figura de ação de alta qualidade.</p>
+            <div class="price">R$ 149,99</div>
+        </div>
+        <div class="product" data-category="tech">
+            <img src="https://via.placeholder.com/150" alt="Produto Tech 2">
+            <h2>Smartwatch</h2>
+            <p>Relógio inteligente com múltiplas funções.</p>
+            <div class="price">R$ 249,99</div>
+        </div>
+        <div class="product" data-category="infoprodutos">
+            <img src="https://via.placeholder.com/150" alt="Infoproduto 2">
+            <h2>E-book de Desenvolvimento Pessoal</h2>
+            <p>Melhore sua vida com técnicas comprovadas.</p>
+            <div class="price">R$ 199,99</div>
+        </div>
     </div>
 </div>
 
@@ -224,7 +253,5 @@
     }
 </script>
 
-</body>
-</html>
 </body>
 </html>
