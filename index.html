@@ -23,11 +23,13 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            flex-wrap: wrap; /* Adicionada para permitir que os itens se ajustem em múltiplas linhas */
         }
         header .logo-whatsapp {
             display: flex;
             align-items: center;
-            margin-left: 12cm;
+            margin-left: auto; /* Centralizar no mobile */
+            margin-right: auto; /* Centralizar no mobile */
         }
         header .logo-whatsapp img {
             width: 100px;
@@ -136,12 +138,22 @@
         }
         /* Responsividade */
         @media (max-width: 480px) {
+            header {
+                justify-content: center; /* Centralizar no mobile */
+                text-align: center; /* Centralizar no mobile */
+            }
             header h1, header .whatsapp {
                 font-size: 1rem;
             }
             header .logo-whatsapp {
                 margin-left: 0;
                 flex-direction: column;
+            }
+            header .logo-whatsapp img {
+                width: 80px;
+                height: 80px;
+                margin-right: 0;
+                margin-bottom: 0.5rem;
             }
             header .whatsapp img {
                 width: 20px;
@@ -192,89 +204,41 @@
     </div>
 
     <div class="product-list">
-               <div class="product" data-category="tech">
+        <div class="product" data-category="tech">
             <img src="https://via.placeholder.com/150" alt="Produto Tech 1">
             <h2>Fone de Ouvido Bluetooth</h2>
             <p>Alta qualidade de som, conexão sem fio.</p>
             <div class="price">R$ 199,99</div>
-            <div class="paypal-button">
-                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                    <input type="hidden" name="cmd" value="_s-xclick">
-                    <input type="hidden" name="hosted_button_id" value="VAGA_EXAMPLE">
-                    <input type="image" src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-large.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-                    <img alt="" border="0" src="https://www.paypalobjects.com/webstatic/en_US/i/scr/pixel.gif" width="1" height="1">
-                </form>
-            </div>
         </div>
         <div class="product" data-category="presentes">
             <img src="https://via.placeholder.com/150" alt="Presente 1">
             <h2>Caneca Nerd</h2>
             <p>Perfeita para geeks e fãs de tecnologia.</p>
             <div class="price">R$ 99,99</div>
-            <div class="paypal-button">
-                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                    <input type="hidden" name="cmd" value="_s-xclick">
-                    <input type="hidden" name="hosted_button_id" value="VAGA_EXAMPLE">
-                    <input type="image" src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-large.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-                    <img alt="" border="0" src="https://www.paypalobjects.com/webstatic/en_US/i/scr/pixel.gif" width="1" height="1">
-                </form>
-            </div>
         </div>
         <div class="product" data-category="infoprodutos">
             <img src="https://via.placeholder.com/150" alt="Infoproduto 1">
             <h2>Curso de Programação</h2>
             <p>Aprenda a programar do zero com este curso.</p>
             <div class="price">R$ 299,99</div>
-            <div class="paypal-button">
-                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                    <input type="hidden" name="cmd" value="_s-xclick">
-                    <input type="hidden" name="hosted_button_id" value="VAGA_EXAMPLE">
-                    <input type="image" src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-large.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-                    <img alt="" border="0" src="https://www.paypalobjects.com/webstatic/en_US/i/scr/pixel.gif" width="1" height="1">
-                </form>
-            </div>
         </div>
         <div class="product" data-category="presentes">
             <img src="https://via.placeholder.com/150" alt="Presente 2">
             <h2>Action Figure</h2>
             <p>Figura de ação de alta qualidade.</p>
             <div class="price">R$ 149,99</div>
-            <div class="paypal-button">
-                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                    <input type="hidden" name="cmd" value="_s-xclick">
-                    <input type="hidden" name="hosted_button_id" value="VAGA_EXAMPLE">
-                    <input type="image" src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-large.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-                    <img alt="" border="0" src="https://www.paypalobjects.com/webstatic/en_US/i/scr/pixel.gif" width="1" height="1">
-                </form>
-            </div>
         </div>
         <div class="product" data-category="tech">
             <img src="https://via.placeholder.com/150" alt="Produto Tech 2">
             <h2>Smartwatch</h2>
             <p>Relógio inteligente com múltiplas funções.</p>
             <div class="price">R$ 249,99</div>
-            <div class="paypal-button">
-                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                    <input type="hidden" name="cmd" value="_s-xclick">
-                    <input type="hidden" name="hosted_button_id" value="VAGA_EXAMPLE">
-                    <input type="image" src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-large.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-                    <img alt="" border="0" src="https://www.paypalobjects.com/webstatic/en_US/i/scr/pixel.gif" width="1" height="1">
-                </form>
-            </div>
         </div>
         <div class="product" data-category="infoprodutos">
             <img src="https://via.placeholder.com/150" alt="Infoproduto 2">
             <h2>E-book de Desenvolvimento Pessoal</h2>
             <p>Melhore sua vida com técnicas comprovadas.</p>
             <div class="price">R$ 199,99</div>
-            <div class="paypal-button">
-                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                    <input type="hidden" name="cmd" value="_s-xclick">
-                    <input type="hidden" name="hosted_button_id" value="VAGA_EXAMPLE">
-                    <input type="image" src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-large.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-                    <img alt="" border="0" src="https://www.paypalobjects.com/webstatic/en_US/i/scr/pixel.gif" width="1" height="1">
-                </form>
-            </div>
         </div>
     </div>
 </div>
