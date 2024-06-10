@@ -157,7 +157,74 @@
     </style>
 </head>
 <body>
-    <!-- O restante do código HTML permanece inalterado -->
-    <!-- Adicione aqui os elementos header, nav, container com products, e footer conforme o código original -->
+
+<header>
+    <div class="logo-whatsapp">
+        <img src="https://via.placeholder.com/100" alt="Logotipo">
+        <h1>Vô Tech: SEU SITE DE PRODUTOS E PRESENTES TECH!</h1>
+    </div>
+    <a class="whatsapp" href="https://wa.me/5545991190099" target="_blank">
+        WhatsApp
+        <img src="<blockquote class="imgur-embed-pub" lang="en" data-id="a/64KrjYQ" data-context="false" ><a href="//imgur.com/a/64KrjYQ"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>" alt="WhatsApp">
+    </a>
+</header>
+
+<nav>
+    <a href="#">Início</a>
+    <a href="#">Produtos</a>
+    <a href="#">Sobre</a>
+    <a href="#">Contato</a>
+</nav>
+
+<div class="container">
+    <div class="filters">
+        <select id="category-filter">
+            <option value="all">Todas as Categorias</option>
+            <option value="tech">Produtos Tech</option>
+            <option value="presentes">Presentes</option>
+            <option value="infoprodutos">Infoprodutos</option>
+        </select>
+        <input type="text" id="search-filter" placeholder="Buscar...">
+    </div>
+
+    <div class="product-list">
+        <!-- Exemplos de produtos sem o botão do PayPal -->
+        <div class="product" data-category="tech">
+            <img src="https://via.placeholder.com/150" alt="Produto Tech 1">
+            <h2>Fone de Ouvido Bluetooth</h2>
+            <p>Alta qualidade de som, conexão sem fio.</p>
+            <div class="price">R$ 199,99</div>
+        </div>
+        <!-- Adicione mais produtos conforme necessário -->
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Vô Tech. Todos os direitos reservados.</p>
+</footer>
+
+<script>
+    document.getElementById('category-filter').addEventListener('change', filterProducts);
+    document.getElementById('search-filter').addEventListener('input', filterProducts);
+
+    function filterProducts() {
+        const category = document.getElementById('category-filter').value;
+        const search = document.getElementById('search-filter').value.toLowerCase();
+        const products = document.querySelectorAll('.product');
+
+        products.forEach(product => {
+            const productCategory = product.getAttribute('data-category');
+            const productName = product.querySelector('h2').innerText.toLowerCase();
+            if ((category === 'all' || productCategory === category) && productName.includes(search)) {
+                product.style.display = '';
+            } else {
+                product.style.display = 'none';
+            }
+        });
+    }
+</script>
+
+</body>
+</html>
 </body>
 </html>
