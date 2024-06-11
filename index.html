@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vô Tech - SEU SITE DE PRODUTOS E PRESENTES TECH</title>
     <style>
+
+
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     background-color: #102040; /* Azul mais escuro */
@@ -49,7 +51,7 @@ header .whatsapp {
     align-items: center;
     position: absolute;
     right: 1rem;
-    top: 50%; /* Ajustar para o centro verticalmente */
+    top: 60%; /* Ajustar para o centro verticalmente */
     transform: translateY(-50%);
 }
 header .whatsapp img {
@@ -97,6 +99,7 @@ nav a:hover {
     border-radius: 8px;
     transition: transform 0.3s ease;
     flex: 1 1 30%; /* Ajusta os produtos para que ocupem 30% do contêiner pai */
+    max-width: calc(33.333% - 2rem); /* Garantir que não exceda 33.333% de largura */
 }
 .product:hover {
     transform: scale(1.05);
@@ -182,15 +185,22 @@ footer {
     }
 }
 @media (min-width: 481px) and (max-width: 768px) {
+    header .whatsapp {
+        top: 70%; /* Ajustar para baixo no modo horizontal */
+    }
     .product {
         flex-basis: calc(33.333% - 2rem); /* Três produtos por linha em telas médias */
+        max-width: calc(33.333% - 2rem); /* Garantir que não exceda 33.333% de largura */
     }
 }
 @media (min-width: 769px) {
     .product {
         flex-basis: calc(33.333% - 2rem); /* Três produtos por linha em telas grandes */
+        max-width: calc(33.333% - 2rem); /* Garantir que não exceda 33.333% de largura */
     }
 }
+
+
 
     </style>
 </head>
