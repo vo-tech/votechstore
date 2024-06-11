@@ -101,8 +101,7 @@ nav a:hover {
     box-sizing: border-box;
     border-radius: 8px;
     transition: transform 0.3s ease;
-    flex: 1 1 30%; /* Ajusta os produtos para que ocupem 30% do contêiner pai */
-    max-width: calc(33.333% - 2rem); /* Garantir que não exceda 33.333% de largura */
+    flex: 1 1 calc(33.333% - 2rem); /* Três produtos por linha em telas grandes */
 }
 
 .product:hover {
@@ -192,7 +191,6 @@ footer {
     .product {
         flex-basis: 100%; /* Um produto por linha em telas pequenas */
         margin: 1rem 0; /* Espaçamento entre os produtos */
-        max-width: 100%; /* Garantir que ocupe 100% da largura */
     }
     nav {
         display: none; /* Remover navegação no mobile */
