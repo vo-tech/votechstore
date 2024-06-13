@@ -7,13 +7,15 @@
     <style>
         body {
             font-family: 'Helvetica Neue', Arial, sans-serif;
-            background-color: #102040; /* Azul mais escuro */
+            background-image: url('https://i.imgur.com/gpY5pEv.jpeg'); /* URL da sua imagem background */
+            background-size: cover;
+            background-attachment: fixed;
             margin: 0;
             padding: 0;
             color: #fff;
         }
         header {
-            background-color: #102040; /* Azul mais escuro */
+            background-color: rgba(16, 32, 64, 0.9); /* Azul mais escuro com transparência */
             color: #fff;
             padding: 1rem;
             text-align: center; /* Centralizar o texto */
@@ -41,26 +43,10 @@
             height: 100px;
             margin-right: 1rem;
         }
-        header .whatsapp {
-            font-size: 1.5rem;
-            color: #fff;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            position: absolute;
-            right: 1rem;
-            top: 50%; /* Ajustar para o centro verticalmente */
-            transform: translateY(-50%);
-        }
-        header .whatsapp img {
-            width: 30px;
-            height: 30px;
-            margin-left: 10px;
-        }
         nav {
             display: flex;
             justify-content: center;
-            background-color: #102040; /* Azul mais escuro */
+            background-color: rgba(16, 32, 64, 0.9); /* Azul mais escuro com transparência */
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
         nav a {
@@ -76,7 +62,7 @@
             padding: 2rem;
             max-width: 1200px;
             margin: auto;
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com transparência */
             color: #333;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
@@ -138,7 +124,7 @@
             border-color: #102040;
         }
         footer {
-            background-color: #102040; /* Azul mais escuro */
+            background-color: rgba(16, 32, 64, 0.9); /* Azul mais escuro com transparência */
             color: #fff;
             text-align: center;
             padding: 1rem;
@@ -146,6 +132,20 @@
             width: 100%;
             bottom: 0;
             box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+        footer .whatsapp {
+            font-size: 1.5rem;
+            color: #fff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+        footer .whatsapp img {
+            width: 30px;
+            height: 30px;
+            margin-left: 10px;
         }
         /* Responsividade */
         @media (max-width: 480px) {
@@ -165,15 +165,6 @@
                 margin-right: 0;
                 margin-bottom: 0.5rem;
             }
-            header .whatsapp {
-                position: static;
-                margin-top: 1rem;
-                transform: none;
-            }
-            header .whatsapp img {
-                width: 20px;
-                height: 20px;
-            }
             .product {
                 flex-basis: 100%; /* Um produto por linha em telas pequenas */
                 margin: 1rem 0; /* Espaçamento entre os produtos */
@@ -185,10 +176,6 @@
         @media (min-width: 481px) and (max-width: 768px) {
             .product {
                 flex-basis: calc(33.333% - 2rem); /* Três produtos por linha em telas médias */
-            }
-            header .whatsapp {
-                top: 60%; /* Ajustar para baixo em telas médias */
-                transform: translateY(-60%);
             }
         }
         @media (min-width: 769px) {
@@ -207,10 +194,6 @@
                 <h1>Vô Tech: Seu site de produtos tech!</h1>
             </div>
         </div>
-        <a class="whatsapp" href="https://wa.me/5545991190099" target="_blank">
-            WhatsApp
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-        </a>
     </header>
 
     <nav>
@@ -282,6 +265,10 @@
 
     <footer>
         <p>&copy; 2024 Vô Tech. Todos os direitos reservados.</p>
+        <a class="whatsapp" href="https://wa.me/5545991190099" target="_blank">
+            WhatsApp
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        </a>
     </footer>
 
     <script>
