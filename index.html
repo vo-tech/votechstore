@@ -41,22 +41,6 @@
             height: 100px;
             margin-right: 1rem;
         }
-        header .whatsapp {
-            font-size: 1.5rem;
-            color: #fff;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            position: absolute;
-            right: 1rem;
-            top: 50%; /* Ajustar para o centro verticalmente */
-            transform: translateY(-50%);
-        }
-        header .whatsapp img {
-            width: 30px;
-            height: 30px;
-            margin-left: 10px;
-        }
         nav {
             display: flex;
             justify-content: center;
@@ -142,10 +126,26 @@
             color: #fff;
             text-align: center;
             padding: 1rem;
-            position: fixed;
+            position: relative;
             width: 100%;
             bottom: 0;
             box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+        footer .whatsapp {
+            font-size: 1.5rem;
+            color: #fff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            right: 1rem;
+            top: 50%; /* Ajustar para o centro verticalmente */
+            transform: translateY(-50%);
+        }
+        footer .whatsapp img {
+            width: 30px;
+            height: 30px;
+            margin-left: 10px;
         }
         /* Responsividade */
         @media (max-width: 480px) {
@@ -165,21 +165,23 @@
                 margin-right: 0;
                 margin-bottom: 0.5rem;
             }
-            header .whatsapp {
-                position: static;
-                margin-top: 1rem;
-                transform: none;
-            }
-            header .whatsapp img {
-                width: 20px;
-                height: 20px;
-            }
             .product {
                 flex-basis: 100%; /* Um produto por linha em telas pequenas */
                 margin: 1rem 0; /* Espaçamento entre os produtos */
             }
             nav {
                 display: none; /* Remover navegação no mobile */
+            }
+            footer .whatsapp {
+                font-size: 1rem;
+                right: 0.5rem;
+                bottom: 0.5rem;
+                transform: none;
+            }
+            footer .whatsapp img {
+                width: 20px;
+                height: 20px;
+                margin-left: 5px;
             }
         }
         @media (min-width: 481px) and (max-width: 768px) {
@@ -189,6 +191,17 @@
             header .whatsapp {
                 top: 60%; /* Ajustar para baixo em telas médias */
                 transform: translateY(-60%);
+            }
+            footer .whatsapp {
+                font-size: 1.25rem;
+                right: 0.75rem;
+                bottom: 0.75rem;
+                transform: none;
+            }
+            footer .whatsapp img {
+                width: 25px;
+                height: 25px;
+                margin-left: 7px;
             }
         }
         @media (min-width: 769px) {
@@ -207,10 +220,6 @@
                 <h1>Vô Tech: Seu site de produtos tech!</h1>
             </div>
         </div>
-        <a class="whatsapp" href="https://wa.me/5545991190099" target="_blank">
-            WhatsApp
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-        </a>
     </header>
 
     <nav>
@@ -282,6 +291,10 @@
 
     <footer>
         <p>&copy; 2024 Vô Tech. Todos os direitos reservados.</p>
+        <a class="whatsapp" href="https://wa.me/5545991190099" target="_blank">
+            WhatsApp
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        </a>
     </footer>
 
     <script>
