@@ -81,6 +81,7 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
             padding-bottom: 5rem; /* Adicionado mais espaço no fundo */
+            position: relative; /* Necessário para posicionar o botão do WhatsApp */
         }
         .product-list {
             display: flex;
@@ -147,7 +148,7 @@
             bottom: 0;
             box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
         }
-        footer .whatsapp {
+        .whatsapp {
             font-size: 1.5rem;
             color: #fff;
             text-decoration: none;
@@ -157,7 +158,7 @@
             right: 1rem;
             bottom: 1rem;
         }
-        footer .whatsapp img {
+        .whatsapp img {
             width: 30px;
             height: 30px;
             margin-left: 10px;
@@ -203,12 +204,12 @@
             .menu.active {
                 display: flex;
             }
-            footer .whatsapp {
+            .whatsapp {
                 font-size: 1rem;
                 right: 0.5rem;
                 bottom: 0.5rem;
             }
-            footer .whatsapp img {
+            .whatsapp img {
                 width: 20px;
                 height: 20px;
                 margin-left: 5px;
@@ -218,12 +219,12 @@
             .product {
                 flex-basis: calc(33.333% - 2rem); /* Três produtos por linha em telas médias */
             }
-            footer .whatsapp {
+            .whatsapp {
                 font-size: 1.25rem;
                 right: 0.75rem;
                 bottom: 0.75rem;
             }
-            footer .whatsapp img {
+            .whatsapp img {
                 width: 25px;
                 height: 25px;
                 margin-left: 7px;
@@ -321,14 +322,15 @@
                 <div class="price">R$ 999,90</div>
             </div>
         </div>
-    </div>
 
-    <footer>
-        <p>&copy; 2024 Vô Tech. Todos os direitos reservados.</p>
         <a class="whatsapp" href="https://wa.me/5545991190099" target="_blank">
             WhatsApp
             <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
         </a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Vô Tech. Todos os direitos reservados.</p>
     </footer>
 
     <script>
