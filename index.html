@@ -147,26 +147,11 @@
             bottom: 0;
             box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
         }
-        footer .whatsapp {
-            font-size: 1.5rem;
-            color: #fff;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            position: absolute;
-            right: 1rem;
-            bottom: 1rem;
-        }
-        footer .whatsapp img {
-            width: 30px;
-            height: 30px;
-            margin-left: 10px;
-        }
         /* WhatsApp Float Button */
         .whatsapp-float {
             position: fixed;
             bottom: 20px;
-            right: 25%;
+            right: 16.66%; /* Ajuste para 2/3 entre o centro e a extremidade direita */
             background-color: #25d366;
             color: #fff;
             border-radius: 50%;
@@ -178,6 +163,7 @@
             cursor: pointer;
             z-index: 1000;
         }
+
         .whatsapp-float img {
             width: 50px;
             height: 50px;
@@ -353,10 +339,6 @@
 
     <footer>
         <p>&copy; 2024 Vô Tech. Todos os direitos reservados.</p>
-        <a class="whatsapp" href="https://wa.me/5545991190099" target="_blank">
-            WhatsApp
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-        </a>
     </footer>
 
     <a class="whatsapp-float" href="https://wa.me/5545991190099" target="_blank">
