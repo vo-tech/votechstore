@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Produto - Fone de Ouvido Bluetooth - QCY T1C</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f4f4f4; /* Cor de fundo refinada */
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 2rem;
+            max-width: 800px;
+            margin: auto;
+            background-color: #fff;
+            color: #333;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+        .product-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .product-title {
+            font-size: 2.5rem;
+            color: #102040;
+            margin-top: 1rem;
+            text-align: center;
+        }
+        .product-description {
+            font-size: 1rem;
+            color: #555;
+            margin-top: 1rem;
+            text-align: justify;
+        }
+        .price {
+            color: #b12704;
+            font-size: 1.5rem;
+            margin: 1rem 0;
+            text-align: center;
+        }
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 1rem;
+            color: #102040;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        header {
+            background-color: #102040;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative;
+            height: 120px; /* Aumentado para acomodar logotipo maior */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        header .logo {
+            width: 70px; /* Aumentado */
+            height: 70px; /* Aumentado */
+            margin-right: 1rem;
+        }
+        /* WhatsApp Float Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px; /* Ajuste para a posição correta */
+            background-color: #25d366;
+            color: #fff;
+            border-radius: 50%;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .whatsapp-float img {
+            width: 50px;
+            height: 50px;
+        }
+        /* Responsividade */
+        @media (max-width: 480px) {
+            header {
+                justify-content: center; /* Centralizar no mobile */
+                text-align: center; /* Centralizar no mobile */
+            }
+            header h1 {
+                font-size: 1rem;
+            }
+            header .logo-whatsapp {
+                flex-direction: column;
+            }
+            header .logo-whatsapp img {
+                width: 80px;
+                height: 80px;
+                margin-right: 0;
+                margin-bottom: 0.5rem;
+            }
+            .product {
+                flex-basis: 100%; /* Um produto por linha em telas pequenas */
+                margin: 1rem 0; /* Espaçamento entre os produtos */
+            }
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+            }
+            .whatsapp-float img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+        @media (min-width: 481px) and (max-width: 768px) {
+            .whatsapp-float img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img class="logo" src="https://i.imgur.com/p5s4UzH.png" alt="Logotipo">
+    <h1>Vô Tech: Detalhes do Produto</h1>
+</header>
+
+<div class="container">
+    <img class="product-img" src="https://i.imgur.com/2j801KO.png" alt="Fone de Ouvido Bluetooth - QCY T1C">
+    <h1 class="product-title">Fone de Ouvido Bluetooth - QCY T1C</h1>
+    <p class="product-description">
+        O <strong>Fone de Ouvido Bluetooth - QCY T1C</strong> oferece liberdade de movimento e som cristalino com um design ergonômico. Ideal para uso diário, este fone de ouvido é leve e confortável, proporcionando uma experiência auditiva de alta qualidade.
+    </p>
+    <p class="product-description">
+        Equipado com tecnologia Bluetooth 5.0, o QCY T1C garante uma conexão estável e rápida com seus dispositivos. A bateria de longa duração permite até 4 horas de reprodução contínua, com um estojo de carregamento portátil que estende o tempo de uso para até 20 horas.
+    </p>
+    <p class="product-description">
+        Seu design compacto e moderno é perfeito para quem está sempre em movimento. O QCY T1C também conta com controle sensível ao toque, facilitando o gerenciamento de músicas e chamadas sem a necessidade de acessar seu dispositivo. Aproveite a liberdade de som sem fio com o QCY T1C.
+    </p>
+    <p class="price">R$ 109,90</p>
+    <a class="back-link" href="index.html">Voltar para a página inicial</a>
+</div>
+
+<a class="whatsapp-float" href="https://wa.me/5545991190099" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+
+</body>
+</html>
