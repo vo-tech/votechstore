@@ -118,21 +118,33 @@
             bottom: 0;
             box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
         }
-        /* WhatsApp Float Button */
-        .whatsapp-float {
+        /* Botões flutuantes */
+        .float-button-container {
             position: fixed;
             bottom: 20px;
             right: 20px; /* Ajuste para a posição correta */
-            background-color: #25d366;
-            color: #fff;
-            border-radius: 50%;
-            padding: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: row-reverse;
+            gap: 10px;
+            z-index: 1000;
+        }
+
+        .float-button {
             display: flex;
             align-items: center;
             justify-content: center;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
             cursor: pointer;
-            z-index: 1000;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        .whatsapp-float {
+            background-color: #25d366;
+            color: #fff;
         }
 
         .whatsapp-float img {
@@ -140,24 +152,10 @@
             height: 50px;
         }
 
-        /* Resgatar Brinde Button */
         .resgatar-brinde {
-            position: fixed;
-            bottom: 20px;
-            right: 100px; /* Ajuste para a posição correta ao lado do WhatsApp */
-            background-color: #007bff; /* Azul padrão */
+            background-color: #007bff;
             color: #fff;
-            border-radius: 50px;
             padding: 10px 20px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            z-index: 1000;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1rem;
         }
 
         /* Responsividade */
@@ -182,19 +180,17 @@
                 flex-basis: 100%; /* Um produto por linha em telas pequenas */
                 margin: 1rem 0; /* Espaçamento entre os produtos */
             }
-            .whatsapp-float {
-                bottom: 20px;
-                right: 20px;
-            }
             .whatsapp-float img {
                 width: 40px;
                 height: 40px;
             }
-            .resgatar-brinde {
-                right: 20px; /* Ajuste para a posição correta ao lado do WhatsApp */
-                bottom: 80px; /* Ajuste para que o botão do brinde não fique em cima do WhatsApp */
-                padding: 8px 16px;
+            .float-button-container {
+                flex-direction: column;
+                right: 10px;
+            }
+            .float-button {
                 font-size: 0.8rem;
+                padding: 8px 16px;
             }
         }
         @media (min-width: 481px) and (max-width: 768px) {
@@ -205,10 +201,13 @@
                 width: 40px;
                 height: 40px;
             }
-            .resgatar-brinde {
-                right: 80px; /* Ajuste para a posição correta ao lado do WhatsApp */
-                padding: 8px 16px;
+            .float-button-container {
+                flex-direction: row-reverse;
+                right: 20px;
+            }
+            .float-button {
                 font-size: 0.9rem;
+                padding: 8px 16px;
             }
         }
         @media (min-width: 769px) {
@@ -246,7 +245,7 @@
                     <h2>Implantação de Automação Integrada</h2>
                 </a>
                 <p>Otimize seus processos empresariais com nossa consultoria especializada. Reduza custos e aumente a eficiência operacional.</p>
-                <div class="price">R$ 1.499,00</div>
+                <div class="price">Entre em contato</div>
             </div>
             <div class="product" data-category="servicos">
                 <a href="servico2.html">
@@ -254,7 +253,7 @@
                     <h2>Desenvolvimento de Software Personalizado</h2>
                 </a>
                 <p>Transforme suas ideias em soluções digitais. Nosso time desenvolve softwares sob medida para atender suas necessidades específicas.</p>
-                <div class="price">R$ 3.999,00</div>
+                <div class="price">Entre em contato</div>
             </div>
             <div class="product" data-category="servicos">
                 <a href="servico3.html">
@@ -262,7 +261,7 @@
                     <h2>Suporte Técnico e Manutenção</h2>
                 </a>
                 <p>Garanta o funcionamento contínuo de seus sistemas com nosso suporte técnico. Atendimento rápido e eficiente.</p>
-                <div class="price">R$ 999,00</div>
+                <div class="price">Entre em contato</div>
             </div>
             <div class="product" data-category="cursos-consultorias">
                 <a href="produto4.html">
@@ -270,7 +269,7 @@
                     <h2>Mentoria Transformando a IA no seu Melhor Colaborador</h2>
                 </a>
                 <p>Aprenda a integrar a Inteligência Artificial ao seu dia a dia profissional e transforme a IA no seu aliado mais poderoso.</p>
-                <div class="price">R$ 999,00</div>
+                <div class="price">Entre em contato</div>
             </div>
             <div class="product" data-category="cursos-consultorias">
                 <a href="produto5.html">
@@ -278,7 +277,7 @@
                     <h2>Curso de Excel com VBA e IA</h2>
                 </a>
                 <p>Automatize suas tarefas e crie soluções poderosas com o Excel VBA. Inclui dicas exclusivas de IA.</p>
-                <div class="price">R$ 1.499,00</div>
+                <div class="price">Entre em contato</div>
             </div>
             <div class="product" data-category="servicos">
                 <a href="servico6.html">
@@ -286,7 +285,7 @@
                     <h2>Criação de Fluxo Automatizado para Marketing Digital</h2>
                 </a>
                 <p>Impulsione seu negócio com estratégias de marketing digital automatizadas. Nossos especialistas ajudarão você a alcançar mais clientes.</p>
-                <div class="price">R$ 2.499,00</div>
+                <div class="price">Entre em contato</div>
             </div>
             <div class="product" data-category="cursos-consultorias">
                 <a href="produto8.html">
@@ -294,7 +293,7 @@
                     <h2>Curso de IA para criar sites</h2>
                 </a>
                 <p>Construa sites incríveis e aumente suas vendas com nosso curso de IA. Tudo o que você precisa saber em um só lugar.</p>
-                <div class="price">R$ 999,00</div>
+                <div class="price">Entre em contato</div>
             </div>
         </div>
     </div>
@@ -303,11 +302,12 @@
         <p>&copy; 2024 Vô Tech. Todos os direitos reservados.</p>
     </footer>
 
-    <a class="whatsapp-float" href="https://wa.me/5545991190099" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-    </a>
-
-    <a class="resgatar-brinde" href="https://forms.gle/1uEhhGFarZ8HfTDb6" target="_blank">Resgatar Brinde</a>
+    <div class="float-button-container">
+        <a class="float-button resgatar-brinde" href="https://forms.gle/1uEhhGFarZ8HfTDb6" target="_blank">Resgatar Brinde</a>
+        <a class="float-button whatsapp-float" href="https://wa.me/55459998272220" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        </a>
+    </div>
 
     <script>
         document.getElementById('category-filter').addEventListener('change', filterProducts);
